@@ -1,6 +1,6 @@
 # Getting started
 
-Simple calculator API hosted on APIMATIC
+ad
 
 ## How to Build
 
@@ -13,7 +13,7 @@ To check if node and npm have been successfully installed, write the following c
 * `node --version`
 * `npm -version`
 
-![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=APIMATIC%20Calculator-Node)
+![Version Check](https://apidocs.io/illustration/nodejs?step=versionCheck&workspaceFolder=api1-Node)
 
 Now use npm to resolve all dependencies by running the following command in the root directory (of the SDK folder):
 
@@ -21,13 +21,13 @@ Now use npm to resolve all dependencies by running the following command in the 
 npm install
 ```
 
-![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=APIMATIC%20Calculator-Node)
+![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency1&workspaceFolder=api1-Node)
 
 ![Resolve Dependencies](https://apidocs.io/illustration/nodejs?step=resolveDependency2)
 
 This will install all dependencies in the `node_modules` folder.
 
-Once dependencies are resolved, you will need to move the folder `APIMATICCalculatorLib ` in to your `node_modules` folder.
+Once dependencies are resolved, you will need to move the folder `Api1Lib ` in to your `node_modules` folder.
 
 ## How to Use
 
@@ -42,7 +42,7 @@ Click on `File` and select `Open Folder`.
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=APIMATIC%20Calculator-Node)
+![Open Project](https://apidocs.io/illustration/nodejs?step=openProject&workspaceFolder=api1-Node)
 
 ### 2. Creating a Test File
 
@@ -54,9 +54,9 @@ var lib = require('lib');
 
 Save changes.
 
-![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=APIMATIC%20Calculator-Node)
+![Create new file](https://apidocs.io/illustration/nodejs?step=createNewFile&workspaceFolder=api1-Node)
 
-![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=APIMATIC%20Calculator-Node)
+![Save new file](https://apidocs.io/illustration/nodejs?step=saveNewFile&workspaceFolder=api1-Node)
 
 ### 3. Running The Test File
 
@@ -66,7 +66,7 @@ To run the `index.js` file, open up the command prompt and navigate to the Path 
 node index.js
 ```
 
-![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=APIMATIC%20Calculator-Node)
+![Run file](https://apidocs.io/illustration/nodejs?step=runProject&workspaceFolder=api1-Node)
 
 
 ## How to Test
@@ -87,11 +87,11 @@ Tests can be run in a number of ways:
 ### Method 3 (Run specific controller's tests)
 
 1. Navigate to the `../test/Controllers/` directory from command prompt.
-2. Type `mocha  APIMATIC CalculatorController`  to run all the tests in that controller file.
+2. Type `mocha  api1Controller`  to run all the tests in that controller file.
 
 > To increase mocha's default timeout, you can change the `TEST_TIMEOUT` parameter's value in `TestBootstrap.js`.
 
-![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=APIMATIC%20CalculatorController)
+![Run Tests](https://apidocs.io/illustration/nodejs?step=runTests&controllerName=api1Controller)
 
 ## Initialization
 
@@ -111,33 +111,31 @@ const lib = require('lib');
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [SimpleCalculatorController](#simple_calculator_controller)
+* [APIController](#api_controller)
 
-## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+The singleton instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```javascript
-var controller = lib.SimpleCalculatorController;
+var controller = lib.APIController;
 ```
 
-### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+### <a name="get_address"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.getAddress") getAddress
 
-> Calculates the expression using the specified operation.
+> TODO: Add a method description
 
 
 ```javascript
-function getCalculate(input, callback)
+function getAddress(operation, callback)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| operation |  ``` Required ```  | The operator to apply on the variables |
-| x |  ``` Required ```  | The LHS value |
-| y |  ``` Required ```  | The RHS value |
+| operation |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -145,12 +143,9 @@ function getCalculate(input, callback)
 
 ```javascript
 
-    var input = [];
-        input['operation'] = new OperationTypeEnum(MULTIPLY);
-        input['x'] = 4;
-        input['y'] = 5;
+    var operation = 'operation';
 
-    controller.getCalculate(input, function(error, response, context) {
+    controller.getAddress(operation, function(error, response, context) {
 
     
     });

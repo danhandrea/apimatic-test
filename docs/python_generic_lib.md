@@ -1,6 +1,6 @@
 # Getting started
 
-Simple calculator API hosted on APIMATIC
+ad
 
 ## How to Build
 
@@ -15,12 +15,12 @@ This should display the version of the PIP Dependency Manager installed if your 
 * Using command line, navigate to the directory containing the generated files (including ```requirements.txt```) for the SDK.
 * Run the command ```pip install -r requirements.txt```. This should install all the required dependencies.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=APIMATIC%20Calculator-Python)
+![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=api1-Python)
 
 
 ## How to Use
 
-The following section explains how to use the Apimaticcalculator SDK package in a new project.
+The following section explains how to use the Api1 SDK package in a new project.
 
 ### 1. Open Project in an IDE
 
@@ -30,17 +30,17 @@ Open up a Python IDE like PyCharm. The basic workflow presented here is also app
 
 Click on ```Open``` in PyCharm to browse to your generated SDK directory and then click ```OK```.
 
-![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=APIMATIC%20Calculator-Python)     
+![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=api1-Python)     
 
 The project files will be displayed in the side bar as follows:
 
-![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)     
+![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=api1-Python&projectName=api1)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
+![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=api1-Python&projectName=api1)
 
 Name the directory as "test"
 
@@ -48,7 +48,7 @@ Name the directory as "test"
    
 Add a python file to this project with the name "testsdk"
 
-![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
+![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=api1-Python&projectName=api1)
 
 Name it "testsdk"
 
@@ -57,10 +57,10 @@ Name it "testsdk"
 In your python file you will be required to import the generated python library using the following code lines
 
 ```Python
-from apimaticcalculator.apimaticcalculator_client import ApimaticcalculatorClient
+from api1.api_1_client import Api1Client
 ```
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator)
+![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=api1-Python&libraryName=api1.api_1_client&projectName=api1)
 
 After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
 
@@ -68,7 +68,7 @@ After this you can write code to instantiate an API client object, get a control
 
 To run the file within your test project, right click on your Python file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator)
+![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=api1-Python&libraryName=api1.api_1_client&projectName=api1)
 
 
 ## How to Test
@@ -89,7 +89,7 @@ API client can be initialized as following.
 
 ```python
 
-client = ApimaticcalculatorClient()
+client = Api1Client()
 ```
 
 
@@ -98,53 +98,41 @@ client = ApimaticcalculatorClient()
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [SimpleCalculatorController](#simple_calculator_controller)
+* [APIController](#api_controller)
 
-## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get controller instance
 
-An instance of the ``` SimpleCalculatorController ``` class can be accessed from the API Client.
+An instance of the ``` APIController ``` class can be accessed from the API Client.
 
 ```python
- simple_calculator_client = client.simple_calculator
+ client_client = client.client
 ```
 
-### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.get_calculate") get_calculate
+### <a name="get_address"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.get_address") get_address
 
-> Calculates the expression using the specified operation.
+> TODO: Add a method description
 
 ```python
-def get_calculate(self,
-                      options=dict())
+def get_address(self,
+                    operation)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| operation |  ``` Required ```  | The operator to apply on the variables |
-| x |  ``` Required ```  | The LHS value |
-| y |  ``` Required ```  | The RHS value |
+| operation |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
 #### Example Usage
 
 ```python
-collect = {}
+operation = 'operation'
 
-operation = OperationTypeEnum.MULTIPLY
-collect['operation'] = operation
-
-x = 4
-collect['x'] = x
-
-y = 5
-collect['y'] = y
-
-
-result = simple_calculator_client.get_calculate(collect)
+client_client.get_address(operation)
 
 ```
 

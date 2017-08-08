@@ -1,6 +1,6 @@
 # Getting started
 
-Simple calculator API hosted on APIMATIC
+ad
 
 ## How to Build
 
@@ -15,10 +15,10 @@ The following section describes how to use the generated SDK in an existing/new 
 Perform the following steps to configure angular and the SDK:
 + Make a `scripts` folder inside the root folder of the project. If you already have a `scripts` folder, skip to the next step.
 + Move the `angular.min.js` file inside the scripts folder. 
-+ Move the `APIMATICCalculatorLib` folder inside the scripts folder.
++ Move the `Api1Lib` folder inside the scripts folder.
 + If any of the Custom Types in your API have `Date`/`Datetime` type fields or any endpoint has `Date`/`Datetime` response, you will need to download angular-moment and moment.js. Move these 2 files into the `scripts` folder as well.
 
-![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=APIMATIC%20Calculator-Angular&projectName=APIMATICCalculatorLib)
+![folder-structure-image](https://apidocs.io/illustration/angularjs?step=folderStructure&workspaceFolder=api1-Angular&projectName=Api1Lib)
 
 ### 2. Open Project Folder
 Open an IDE/Text Editor for JavaScript like Sublime Text. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.  
@@ -26,7 +26,7 @@ Click on `File` and select `Open Folder`
 
 Select the folder of your SDK and click on `Select Folder` to open it up in Sublime Text. The folder will become visible in the bar on the left.
 
-![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=APIMATIC%20Calculator-Angular)
+![open-folder-image](https://apidocs.io/illustration/angularjs?step=openFolder&workspaceFolder=api1-Angular)
 
 ### 3. Create an Angular Application
 Since Angular JS is used for client-side web development, in order to use the generated library, you will have to develop an application first.
@@ -63,7 +63,7 @@ Skip to the next step if you are working with an existing project and already ha
 </html>
 ```
 
-![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=APIMATIC%20Calculator-Angular)
+![initial-html-code-image](https://apidocs.io/illustration/angularjs?step=initialCode&workspaceFolder=api1-Angular)
 
 ### 5. Including links to Angular in HTML file
 Your HTML file needs to have a link to `angular.min.js` file to use Angular-JS. Add the link using `script` tags inside the `head` section of `index.html` like:
@@ -83,24 +83,23 @@ Import the reference to the generated SDK files inside your html file like:
 <head>
     ...
     <!-- Helper files -->
-    <script src="scripts/APIMATICCalculatorLib/Module.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Configuration.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/ModelFactory.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/ObjectMapper.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/APIHelper.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Http/Client/HttpContext.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Http/Client/RequestClient.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Http/Request/HttpRequest.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Http/Response/HttpResponse.js"></script>
+    <script src="scripts/Api1Lib/Module.js"></script>
+    <script src="scripts/Api1Lib/Configuration.js"></script>
+    <script src="scripts/Api1Lib/ModelFactory.js"></script>
+    <script src="scripts/Api1Lib/ObjectMapper.js"></script>
+    <script src="scripts/Api1Lib/APIHelper.js"></script>
+    <script src="scripts/Api1Lib/Http/Client/HttpContext.js"></script>
+    <script src="scripts/Api1Lib/Http/Client/RequestClient.js"></script>
+    <script src="scripts/Api1Lib/Http/Request/HttpRequest.js"></script>
+    <script src="scripts/Api1Lib/Http/Response/HttpResponse.js"></script>
 
     <!-- API Controllers -->
-    <script src="scripts/APIMATICCalculatorLib/Controllers/BaseController.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Controllers/SimpleCalculatorController.js"></script>
+    <script src="scripts/Api1Lib/Controllers/BaseController.js"></script>
+    <script src="scripts/Api1Lib/Controllers/APIController.js"></script>
 
 
     <!-- Models -->
-    <script src="scripts/APIMATICCalculatorLib/Models/BaseModel.js"></script>
-    <script src="scripts/APIMATICCalculatorLib/Models/OperationTypeEnum.js"></script>
+    <script src="scripts/Api1Lib/Models/BaseModel.js"></script>
 
     ...
 </head>
@@ -141,7 +140,7 @@ In order to use the generated SDK's modules, controllers and factories, the proj
 Add the dependency like this:
 
 ```js
-var app = angular.module('myApp', ['APIMATICCalculatorLib']);
+var app = angular.module('myApp', ['Api1Lib']);
 ```
 At this point, the SDK has been successfully included in your project. Further steps include using a service/factory from the generated SDK. To see working example of this, please head on [over here](#list-of-controllers) and choose any class to see its functions and example usage.  
 
@@ -155,7 +154,7 @@ To run the app, simply open up the `index.html` file in a browser.
 
 The Angular Application can be initialized as following:
 ```JavaScript
-var app = angular.module('myApp', [APIMATICCalculatorLib]);
+var app = angular.module('myApp', [Api1Lib]);
 // now controllers/services can be created which import
 // the factories provided by the sdk
 ```
@@ -168,34 +167,32 @@ var app = angular.module('myApp', [APIMATICCalculatorLib]);
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [SimpleCalculatorController](#simple_calculator_controller)
+* [APIController](#api_controller)
 
-## <a name="simple_calculator_controller"></a>![Class: ](https://apidocs.io/img/class.png ".SimpleCalculatorController") SimpleCalculatorController
+## <a name="api_controller"></a>![Class: ](https://apidocs.io/img/class.png ".APIController") APIController
 
 ### Get singleton instance
 
-The singleton instance of the ``` SimpleCalculatorController ``` class can be accessed via Dependency Injection.
+The singleton instance of the ``` APIController ``` class can be accessed via Dependency Injection.
 
 ```js
-	app.controller("testController", function($scope, SimpleCalculatorController){
+	app.controller("testController", function($scope, APIController){
 	});
 ```
 
-### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".SimpleCalculatorController.getCalculate") getCalculate
+### <a name="get_address"></a>![Method: ](https://apidocs.io/img/method.png ".APIController.getAddress") getAddress
 
-> Calculates the expression using the specified operation.
+> TODO: Add a method description
 
 
 ```javascript
-function getCalculate(input)
+function getAddress(operation)
 ```
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| operation |  ``` Required ```  | The operator to apply on the variables |
-| x |  ``` Required ```  | The LHS value |
-| y |  ``` Required ```  | The RHS value |
+| operation |  ``` Required ```  | TODO: Add a parameter description |
 
 
 
@@ -204,14 +201,11 @@ function getCalculate(input)
 ```javascript
 
 
-	app.controller("testController", function($scope, SimpleCalculatorController){
-        var input = [];
-        input['operation'] = new OperationTypeEnum(MULTIPLY);
-        input['x'] = 4;
-        input['y'] = 5;
+	app.controller("testController", function($scope, APIController){
+        var operation = 'operation';
 
 
-		var result = SimpleCalculatorController.getCalculate(input);
+		var result = APIController.getAddress(operation);
         //Function call returns a promise
         result.then(function(success){
 			//success case
