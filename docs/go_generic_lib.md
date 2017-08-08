@@ -1,6 +1,6 @@
 # Getting started
 
-Simple calculator API hosted on APIMATIC
+ad
 
 ## How to Build
 
@@ -31,15 +31,15 @@ Now follow the steps mentioned below to build your SDK:
 
 3. In ```Select root directory```, provide path to the unzipped archive for the generated code. Once the path is set and the Project becomes visible under ```Projects``` click ```Finish```
 
-![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=APIMATIC%20Calculator-GoLang&projectName=apimaticcalculator_lib)
+![Importing SDK into Eclipse - Step 3](https://apidocs.io/illustration/go?step=import2&workspaceFolder=api1-GoLang&projectName=api1_lib)
 
 4. The Go library will be imported and its files will be visible in the Project Explorer
 
-![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=apimaticcalculator_lib)
+![Importing SDK into Eclipse - Step 4](https://apidocs.io/illustration/go?step=import3&projectName=api1_lib)
 
 ## How to Use
 
-The following section explains how to use the ApimaticcalculatorLib library in a new project.
+The following section explains how to use the Api1Lib library in a new project.
 
 ### 1. Add a new Test Project
 
@@ -53,19 +53,19 @@ Name the Project as ```Test``` and click ```Finish```
 
 Create a new directory in the ```src``` directory of this project
 
-![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=apimaticcalculator_lib)
+![Create a new Maven Project - Step 2](https://apidocs.io/illustration/go?step=createNewProject2&projectName=api1_lib)
 
 Name it ```test.com```
 
-![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=apimaticcalculator_lib)
+![Create a new Maven Project - Step 3](https://apidocs.io/illustration/go?step=createNewProject3&projectName=api1_lib)
 
 Now create a new file inside ```src/test.com```
 
-![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=apimaticcalculator_lib)
+![Create a new Maven Project - Step 4](https://apidocs.io/illustration/go?step=createNewProject4&projectName=api1_lib)
 
 Name it ```testsdk.go```
 
-![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=apimaticcalculator_lib)
+![Create a new Maven Project - Step 5](https://apidocs.io/illustration/go?step=createNewProject5&projectName=api1_lib)
 
 In this Go file, you can start adding code to initialize the client library. Sample code to initialize the client library and using its methods is given in the subsequent sections.
 
@@ -75,7 +75,7 @@ You need to import your generated library in this project in order to make use o
 
 Right click on the project name and click on ```Properties```
 
-![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=apimaticcalculator_lib)
+![Adding dependency to the client library - Step 1](https://apidocs.io/illustration/go?step=testProject0&projectName=api1_lib)
 
 Choose ```Go Compiler``` from the side menu. Check ```Use project specific settings``` and uncheck ```Use same value as the GOPATH environment variable.```. By default, the GOPATH value from the environment variables will be visible in ```Eclipse GOPATH```. Do not remove this as this points to the unirest dependency.
 
@@ -83,7 +83,7 @@ Choose ```Go Compiler``` from the side menu. Check ```Use project specific setti
 
 Append the library path to this GOPATH
 
-![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=APIMATIC%20Calculator-GoLang)
+![Adding dependency to the client library - Step 3](https://apidocs.io/illustration/go?step=testProject2&workspaceFolder=api1-GoLang)
 
 Once the path is appended, click on ```OK```
 
@@ -91,65 +91,53 @@ Once the path is appended, click on ```OK```
 
 Right click on the project name and click on ```Build Project```
 
-![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=apimaticcalculator_lib)
+![Build Project](https://apidocs.io/illustration/go?step=buildProject&projectName=api1_lib)
 
 ### 4. Run the Test Project
 
 If the build is successful, right click on your Go file and click on ```Run As``` -> ```Go Application```
 
-![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=apimaticcalculator_lib)
+![Run Project](https://apidocs.io/illustration/go?step=runProject&projectName=api1_lib)
 
 # Class Reference
 
 ## <a name="list_of_controllers"></a>List of Controllers
 
-* [simplecalculator_pkg](#simplecalculator_pkg)
+* [api_pkg](#api_pkg)
 
-## <a name="simplecalculator_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".simplecalculator_pkg") simplecalculator_pkg
+## <a name="api_pkg"></a>![Class: ](https://apidocs.io/img/class.png ".api_pkg") api_pkg
 
 ### Get instance
 
-Factory for the ``` SIMPLECALCULATOR ``` interface can be accessed from the package simplecalculator_pkg.
+Factory for the ``` API ``` interface can be accessed from the package api_pkg.
 
 ```go
-simpleCalculator := simplecalculator_pkg.NewSIMPLECALCULATOR()
+aPI := api_pkg.NewAPI()
 ```
 
-### <a name="get_calculate"></a>![Method: ](https://apidocs.io/img/method.png ".simplecalculator_pkg.GetCalculate") GetCalculate
+### <a name="get_address"></a>![Method: ](https://apidocs.io/img/method.png ".api_pkg.GetAddress") GetAddress
 
-> Calculates the expression using the specified operation.
+> TODO: Add a method description
 
 
 ```go
-func (me *SIMPLECALCULATOR_IMPL) GetCalculate(input *GetCalculateInput)(float64,error)
+func (me *API_IMPL) GetAddress(operation string)(,error)
 ```
 
 #### Parameters
 
 | Parameter | Tags | Description |
 |-----------|------|-------------|
-| operation |  ``` Required ```  | The operator to apply on the variables |
-| x |  ``` Required ```  | The LHS value |
-| y |  ``` Required ```  | The RHS value |
+| operation |  ``` Required ```  | TODO: Add a parameter description |
 
 
 #### Example Usage
 
 ```go
-collect := new (simplecalculator_pkg.GetCalculateInput)
+operation := "operation"
 
-operation := models_pkg.Operation Type_MULTIPLY
-collect.Operation = operation
-
-x := "4"
-collect.X = x
-
-y := "5"
-collect.Y = y
-
-
-var result float64
-result,_ = simpleCalculator.GetCalculate(collect)
+var result 
+result,_ = aPI.GetAddress(operation)
 
 ```
 
